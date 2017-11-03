@@ -8,7 +8,10 @@ function aLanguage() {
 	this.test.ctx.language = getFirstQuotedString(this.test.parent.title);
 }
 
+const anUnknownLanguage = aLanguage;
+
 module.exports = {
 	aName,
 	aLanguage,
+	anUnknownLanguage,
 }

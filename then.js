@@ -8,6 +8,13 @@ function itShouldReturn() {
 	return assert.strictEqual(returnValue, expectedValue);
 }
 
+function itShouldThrowAnError() {
+	const { error } = this.test.ctx;
+	const expectedMessage = getFirstQuotedString(this.test.title);
+	return assert.strictEqual(error.message, expectedMessage);
+}
+
 module.exports = {
 	itShouldReturn,
+	itShouldThrowAnError,
 }
