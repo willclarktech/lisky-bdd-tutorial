@@ -19,6 +19,13 @@ describe('wishHappyBirthday', () => {
 				it('Then it should return "Herzlichen Glückwunsch zum Geburtstag, Lisky!"', then.itShouldReturn);
 			});
 		});
+		describe('Given an unsupported language "Esperanto"', () => {
+			beforeEach(given.anUnknownLanguage);
+			describe('When wishHappyBirthday is called with the name and the language', () => {
+				beforeEach(when.wishHappyBirthdayIsCalledWithTheNameAndTheLanguage);
+				it('Then it should throw an error "Unsupported language"', then.itShouldThrowAnError);
+			});
+		});
 	});
 	describe('Given a name "Satoshi"', () => {
 		beforeEach(given.aName);
