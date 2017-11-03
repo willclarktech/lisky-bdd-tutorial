@@ -1,0 +1,32 @@
+{
+  "name": "lisky-bdd-tutorial",
+  "version": "0.1.0",
+  "description": "Companion repo for Lisky BDD tutorial",
+  "main": "source.js",
+  "engines": {
+    "node": ">=8.9.0",
+    "npm": ">=5.5.1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  },
+  "scripts": {
+    "test": "mocha specification.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willclarktech/lisky-bdd-tutorial.git"
+  },
+  "keywords": [
+    "lisky",
+    "lisk",
+    "bdd"
+  ],
+  "author": "willclarktech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willclarktech/lisky-bdd-tutorial/issues"
+  },
+  "homepage": "https://github.com/willclarktech/lisky-bdd-tutorial#readme"
+}
