@@ -18,9 +18,9 @@ In brief though: TDD is an approach to software development in which the develop
 1. Writing test code which *implements* each such step atomically
 1. Writing source code to *pass the tests* (and thus conform to the specification)
 
-As with the [Gherkin][gherkin] language most often used for end-to-end testing, we divide specifications into 
-- **Given** (for setting up test context), 
-- **When** (for execution of the code under test), and 
+As with the [Gherkin][gherkin] language most often used for end-to-end testing, we divide specifications into
+- **Given** (for setting up test context),
+- **When** (for execution of the code under test), and
 - **Then** (for making assertions) steps.
 
 ## Tutorial
@@ -56,7 +56,7 @@ In the code blocks below I’ll put the name of the file being edited in a comme
 
 ### Happy path
 
-We’ll use an [outside-in approach][wiki-outside-in] approach considering the [happy path][wiki-happy-path] first. Of course, you may find an inside-out approach suits you better, but outside-in works especially well with BDD.
+We’ll use an [outside-in approach][wiki-outside-in] approach considering the [happy path][wiki-happy-path] first. "Outside-in" means we’re going to write the code we really want to work first, and write the code it needs to work later and only when we’re forced to. This contrasts with "inside-out" which involves trying to predict the code you’ll need later on, so that when you come to write that code you already have all the code it depends on. Of course, you may find an inside-out approach suits you better, but outside-in works especially well with BDD.
 
 Addressing the happy path, we start by specifying what should happen if everything goes according to plan:
 
@@ -436,7 +436,7 @@ Obviously there’s a lot more you could do in terms of validation for this func
 1. It results in atomic tests by default, so your test suite is less brittle.
 1. Writing specifications with language abstracted from test implementation allows you to think about the exact functionality you want without getting distracted by thoughts about how you will test that functionality. This encourages stronger, more meaningful tests, which should ultimately result in more robust source code.
 1. Once you’ve properly thought about what steps are required for some test, it’s usually trivial to write the actual test code.
-1. It’s also easier for newcomers to the codebase to understand the tests you’ve written: instead of being forced to infer the meaning of a test from the implementation, a new developer simply reads English-like sentences which explain what’s happening in easily digestible chunks.
+1. It’s also easier for newcomers to the codebase to understand the tests you’ve written: instead of being forced to infer the meaning of a test from the implementation, a new developer simply reads English-like sentences which explain what’s happening in easily digestible chunks. They’re helped by the fact that test descriptions are verbose and explicit: the higher degree of repetition in specification files is a cost paid for the benefit of intelligibility.
 1. Since each step is defined in one place, this approach encourages reuse of existing steps, resulting in a more [DRY][wiki-dry] codebase. We removed (net) hundreds of lines of test code when switching from our old testing approach in Lisky.
 1. Refactoring often poses problems for tests: they can break in a way that requires a lot of updates all over the place or in the most insidious cases they can lose meaning without you noticing. This approach makes refactoring test code much simpler - just make the change to the relevant step definition and all of the tests which include that step reflect the update.
 
