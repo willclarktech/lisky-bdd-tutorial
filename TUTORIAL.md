@@ -18,7 +18,10 @@ In brief though: TDD is an approach to software development in which the develop
 1. Writing test code which *implements* each such step atomically
 1. Writing source code to *pass the tests* (and thus conform to the specification)
 
-As with the [Gherkin][gherkin] language most often used for end-to-end testing, we divide specifications into **Given** (for setting up test context), **When** (for execution of the code under test), and **Then** (for making assertions) steps.
+As with the [Gherkin][gherkin] language most often used for end-to-end testing, we divide specifications into 
+- **Given** (for setting up test context), 
+- **When** (for execution of the code under test), and 
+- **Then** (for making assertions) steps.
 
 ## Tutorial
 
@@ -55,7 +58,7 @@ In the code blocks below I’ll put the name of the file being edited in a comme
 
 We’ll use an [outside-in approach][wiki-outside-in] approach considering the [happy path][wiki-happy-path] first. Of course, you may find an inside-out approach suits you better, but outside-in works especially well with BDD.
 
-We start by specifying what should happen if everything goes according to plan:
+Addressing the happy path, we start by specifying what should happen if everything goes according to plan:
 
 ```js
 // specification.js
