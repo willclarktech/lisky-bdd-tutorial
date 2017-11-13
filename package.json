@@ -9,10 +9,12 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "prettier": "^1.8.2"
   },
   "scripts": {
-    "test": "mocha specification.js"
+    "test": "mocha specification.js",
+    "format": "prettier --write *.js"
   },
   "repository": {
     "type": "git",
